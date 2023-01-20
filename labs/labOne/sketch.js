@@ -1,3 +1,7 @@
+//Blue Pinegar
+//January 19, 2023
+//N220
+
 function setup() {
     //background water
 createCanvas (800, 600);
