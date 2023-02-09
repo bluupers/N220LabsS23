@@ -1,17 +1,36 @@
-//function setup
-    //create a canvas
+function setup() {
+    createCanvas(650, 500);
+}
+function draw() {
+    background(200);
+    drawLeftRectangle(leftRectangle);
+    drawRightRectangle(rightRectangle);
+    if(keyIsDown(UP_ARROW)) {
+        leftRectangle.y++;
+        rightRectangle.y--;
+    }
+    if(keyIsDown(DOWN_ARROW)) {
+        leftRectangle.y--;
+        rightRectangle.y++;
+    }
+}
 
-//function draw
-    //invoke rectangle 1
-    //invoke rectangle 2
-    //if statement
-        //when UP key is pressed, rectangle 1 will have a decreasing y value. rectangle 2 will have an increasing y value
+function drawLeftRectangle(leftRectangle) {
+rect(leftRectangle.x, leftRectangle.y, leftRectangle.width, leftRectangle.height);
+}
+function drawRightRectangle(rightRectangle) {
+    rect(rightRectangle.x, rightRectangle.y, rightRectangle.width, rightRectangle.height);
+}
 
-    //if statement
-        //when DOWN key is pressed, rectangle 1 will have an increasing y value. rectangle 2 will have a decreasing y value
-
-//create object
-    //tall rectangle with positive x value
-
-//create object
-    //tall rectangle with negative x value
+let leftRectangle = {
+    x: 20,
+    y: 200,
+    width: 30,
+    height: 150
+};
+let rightRectangle = {
+    x: 600,
+    y: 200,
+    width: 30,
+    height: 150
+};
