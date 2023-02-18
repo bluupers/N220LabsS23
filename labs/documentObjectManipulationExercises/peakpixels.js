@@ -9,6 +9,5 @@ box.style.width = width + "px";
 function sizeIncrease() {
     box.style.height = (height * 1.1) + "px";
     box.style.width = (width * 1.1) + "px";
-
-console.log(height);
+// console.log(height);
 }
