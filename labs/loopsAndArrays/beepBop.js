@@ -1,10 +1,15 @@
-/* Write a loop that runs 25 times and writes the iterand (current iteration of the loop) out onto the page inside of a div element.
-
-However,
-
-When the iterand is divisible by 3, write the word "beep" instead
-When the iterand is divisible by 5, write the word "bop" instead
-When the iterand is divisible by 3 AND 5, write "beepbop" instead */
-
-//unsure of how to go about this one, wrote algorithm for other three programs 
-
+let musicalDiv = document.getElementById("musicalDiv");
+musicalDiv.height = 800 + "px";
+for(i=0; i<25; i++) {
+    
+    if(i%5 ==0 && i%3 == 0) {
+        musicalDiv.innerHTML += "beepbop";
+    } else if(i%5 == 0) {
+        musicalDiv.innerHTML += "bop";
+    } else if(i%3 == 0) {
+        musicalDiv.innerHTML += "beep";
+    } else { 
+     musicalDiv.innerHTML += i;   
+    }
+    musicalDiv.innerHTML += "<br/>";
+}
