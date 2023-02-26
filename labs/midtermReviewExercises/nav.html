@@ -1,4 +1,25 @@
 <!-- use ! to set up page -->
 <!-- link js to html page using script source -->
-<!-- create 7 divs, each with different text. Rainbow color names? -->
+<!-- create 6 divs, each with different text. Rainbow color names? -->
 <!-- add on click property for each div, triggering a function -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Navigation Highlighter</title>
+  </head>
+  <body>
+    <div id="titleDiv">Pick a Color!</div>
+    <div id="redDiv" onclick="highlightRed()">Red</div>
+    <div id="orangeDiv" onclick="highlightOrange()">Orange</div>
+    <div id="yellowDiv" onclick="highlightYellow()">Yellow</div>
+    <div id="greenDiv" onclick="highlightGreen()">Green</div>
+    <div id="blueDiv" onclick="highlightBlue()">Blue</div>
+    <div id="purpleDiv" onclick="highlightPurple()">Purple</div>
+
+    <script src="nav.js"></script>
+  </body>
+</html>
