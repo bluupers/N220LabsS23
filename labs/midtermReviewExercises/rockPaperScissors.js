@@ -47,25 +47,32 @@ update the score */
 
 let score = 0;
 let scoreDiv = document.getElementById("scoreDiv");
+let badDiv = document.getElementById("badDiv");
 scoreDiv.innerHTML = "Score: " + score;
+
+
 function rpsRock() {
+    
     let computer = Math.floor(Math.random()*3);
     //0 is rock, 1 is paper, 2 is scissors
     if(computer==0) {
         //rock v rock
         //no score change
+        badDiv.innerHTML = "You chose Rock, Computer chose Rock.";
         console.log("rock");
     } else if(computer==1) {
         //rock v paper
         //score is -1
         score = score - 1;
         scoreDiv.innerHTML = "Score: " + score;
+        badDiv.innerHTML = "You chose Rock, Computer chose Paper.";
         console.log("paper");
     } else if(computer==2) {
         //rock v scissors
         //score is +1
         score = score + 1;
         scoreDiv.innerHTML = "Score: " + score;
+        badDiv.innerHTML = "You chose Rock, Computer chose Scissors.";
         console.log("scissors");
     }
     console.log("~~~");
@@ -79,16 +86,19 @@ function rpsPaper() {
         //score is +1
         score = score + 1;
         scoreDiv.innerHTML = "Score: " + score;
+        badDiv.innerHTML = "You chose Paper, Computer chose Rock.";
         console.log("rock");
     } else if(computer==1) {
         //paper v paper
         //score is +0
+        badDiv.innerHTML ="You chose Paper, Computer chose Paper.";
         console.log("paper");
     } else if(computer==2) {
         //paper v scissors
         //score is -1
         score = score - 1;
         scoreDiv.innerHTML = "Score: " + score;
+        badDiv.innerHTML = "You chose Paper, Computer chose Scissors.";
         console.log("scissors");
     }
     console.log("~~~");
@@ -102,16 +112,19 @@ function rpsScissors() {
         //score is -1
         score = score - 1;
         scoreDiv.innerHTML = "Score: " + score;
+        badDiv.innerHTML = "You chose Scissors, Computer chose Rock.";
         console.log("rock");
     } else if(computer==1) {
         //scissors v paper
         //score is +1
         score = score + 1;
         scoreDiv.innerHTML = "Score: " + score;
+        badDiv.innerHTML = "You chose Scissors, Computer chose Paper.";
         console.log("paper");
     } else if(computer==2) {
         //scissors v scissors
         //score is +0
+        badDiv.innerHTML = "You chose Scissors, Computer chose Scissors.";
         console.log("scissors");
     }
     console.log("~~~");
@@ -119,5 +132,6 @@ function rpsScissors() {
 function pullGuard() {
     //points -0.5
     score = score - 0.5;
-        scoreDiv.innerHTML = "Score: " + score;
+    scoreDiv.innerHTML = "Score: " + score;
+    badDiv.innerHTML = "You chose Guard.";
 }
