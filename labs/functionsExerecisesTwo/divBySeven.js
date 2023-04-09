@@ -5,4 +5,23 @@
     //divide input by 7 and see if the remainder is equal to zero
     //if it is then return "true"
         //else return "false"
-        
+
+
+let resultsDiv = document.getElementById("resultsDiv");
+let numberText = document.getElementById("numberText");
+
+function divide(number) {
+// let number = numberText.value;
+if (number%7==0) {
+    resultsDiv.innerHTML = "Yes";
+    console.log("True");
+} else {
+    resultsDiv.innerHTML = "No";
+    console.log("False");
+}
+}
+
+function check() {
+    divide(numberText.value);
+
+}

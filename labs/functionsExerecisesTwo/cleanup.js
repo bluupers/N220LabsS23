@@ -6,3 +6,15 @@
 //create a function that searches the string input for #
     //if found then remove the #
     //return the new string
+
+let resultsDiv = document.getElementById("resultsDiv");
+let stringText = document.getElementById("stringText");
+
+function clean(dirtyText) {
+     let newText = dirtyText.split("#");
+     resultsDiv.innerHTML = newText.join("");
+}
+
+function run() {
+clean(stringText.value);
+}

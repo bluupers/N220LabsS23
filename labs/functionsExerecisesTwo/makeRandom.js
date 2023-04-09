@@ -6,3 +6,14 @@
     //pick a number
     //round it up so it is always whole
     //edit innerHTML of a div to display it on screen
+
+let displayDiv = document.getElementById("displayDiv");
+
+function random() {
+   let randomNumber = (Math.ceil(Math.random()*10));
+   displayDiv.innerHTML = randomNumber;
+}
+
+function run() {
+    random();
+}
