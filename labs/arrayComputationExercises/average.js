@@ -47,8 +47,9 @@ function itsClicked() {
         average = sum/splitNumbers.length;
 
     }
-    displayDiv.innerHTML = sum;
-    secondDiv.innerHTML = average;
+    displayDiv.innerHTML = "Sum:" + sum;
+    secondDiv.innerHTML = "Average:" + average;
+    userNumbers.value="";
 
 
 }
