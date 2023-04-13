@@ -27,5 +27,30 @@ Removes the text from the input so the user can type in new numbers*/
     //display that in a div
 //remove input text
 
+let displayDiv = document.getElementById("displayDiv");
+let userNumbers = document.getElementById("userNumbers");
+let createArray = document.getElementById("createArray");
+let secondDiv = document.getElementById("secondDiv");
+let sum=0;
+let average=0;
+function itsClicked() {
+    //break the string
+    let numberList = userNumbers.value;
+    console.log(numberList);
+    let splitNumbers = numberList.split(",");
+    console.log(splitNumbers);
+
+    //do the array stuff in a for loop
+    for(let i = 0; i<splitNumbers.length; i++) {
+        
+        sum+= Number(splitNumbers[i]);
+        average = sum/splitNumbers.length;
+
+    }
+    displayDiv.innerHTML = sum;
+    secondDiv.innerHTML = average;
+
+
+}
  
 
