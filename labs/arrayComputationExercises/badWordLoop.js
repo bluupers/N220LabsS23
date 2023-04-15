@@ -29,10 +29,10 @@ function itsClicked() {
         console.log(count);
         //each loop check if each entry is equal to the bad words
         
-        if(((statement[i] == "clear") || (statement[i] == "water")) || (statement[i] == "tires")) {
+        if(((splitStatement[i] == "clear") || (splitStatement[i] == "water")) || (splitStatement[i] == "tires")) {
             //if true then add one to a variable count
             count += 1;
-            console.log(count);
+            console.log("Count:" + count);
 
         }
     }
