@@ -11,13 +11,36 @@ If any bad words were found (found / not found)
 How many bad words, in total, were found
 Clears out the text field so the user can input a new string*/
 
+//setup
+let resultsDiv = document.getElementById("resultsDiv");
+let userWords = document.getElementById("userWords");
+let count=0;
 
-
+//function
 //split string input on spaces
+function itsClicked() {
 
-//create a for loop
-    //each loop check if each entry is equal to the bad words
-    //if true then add one to a variable count
+    let statement = userWords.value;
+    let splitStatement = statement.split(" ");
+    console.log(splitStatement);
+
+    //create a for loop
+    for(let i=0; i<statement.length; i++) {
+        console.log(count);
+        //each loop check if each entry is equal to the bad words
+        
+        if(((statement[i] == "clear") || (statement[i] == "water")) || (statement[i] == "tires")) {
+            //if true then add one to a variable count
+            count += 1;
+            console.log(count);
+
+        }
+    }
+}
+
+
+    
+    
     //display to div found
     //display to div amount of bad words found
     //clear input
