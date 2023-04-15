@@ -33,7 +33,8 @@ function itsClicked() {
             //if true then add one to a variable count
             count += 1;
             console.log("Count:" + count);
-
+            resultsDiv.innerHTML = "Found" + "  Amount: " +  count;
+            userWords.value= "";
         }
     }
 }
