@@ -35,6 +35,7 @@ function itsClicked() {
             console.log("Count:" + count);
             resultsDiv.innerHTML = "Found" + "  Amount: " +  count;
             userWords.value= "";
+            // count = 0;
         }
     }
 }
