@@ -5,13 +5,43 @@
 //algorithm start
 
 //set up program with id for 3 divs
+let redDiv = document.getElementById("redDiv");
+let greenDiv = document.getElementById("greenDiv");
+let blueDiv = document.getElementById("blueDiv");
 
+//style starting divs
+//red
+redDiv.style.backgroundColor = "#808080";
+redDiv.style.height = "200px";
+redDiv.style.width = "200px";
+redDiv.style.margin = "5px";
+redDiv.style.float = "left";
+//green
+greenDiv.style.backgroundColor = "#808080";
+greenDiv.style.height = "200px";
+greenDiv.style.width = "200px";
+greenDiv.style.margin = "5px";
+greenDiv.style.float = "left";
+//blue
+blueDiv.style.backgroundColor = "#808080";
+blueDiv.style.height = "200px";
+blueDiv.style.width = "200px";
+blueDiv.style.margin = "5px";
+blueDiv.style.float = "left";
 
-//add a custom attribute to each element, storing the color it will change to 
+//add event listeners
+redDiv.addEventListener("click", itsClicked);
+blueDiv.addEventListener("click", itsClicked);
+greenDiv.addEventListener("click", itsClicked);
 
 //create a function
-    //create a var set to name of div clicked
+function itsClicked(event) {
+    //create a var set to div clicked
+    let changeDiv = event.target;
     //create a var set to div clicked's background color
-    //add an event listener to listen for onclick
-    //when div is clicked, change backgroundColor to customcolor attribute
+    let divColor = changeDiv.getAttribute("value");
+    //when div is clicked, change backgroundColor to value attribute
+    changeDiv.style.backgroundColor = divColor;
+}
+    
     

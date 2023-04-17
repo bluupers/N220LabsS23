@@ -5,10 +5,29 @@
 //algorithm start
 
 //declare buttons as document get element by ids
-//declare a div to display correct answers
+let connecticutButton = document.getElementById("connecticutButton");
+let oregonButton = document.getElementById("oregonButton");
+let ohioButton = document.getElementById("ohioButton");
+
 //give each button a custom attribute that has the correct answer to the question
+    //let connecticutAnswer = connecticutButton.getAttribute("value");
+    //let oregonAnswer = oregonButton.getAttribute("value");
+    //let ohioAnswer = ohioButton.getAttribute("value");
+
+//declare a div to display correct answers
+let answerDiv = document.getElementById("answerDiv");
+
 //add event listeners to each button
+connecticutButton.addEventListener("click", itsClicked);
+oregonButton.addEventListener("click", itsClicked);
+ohioButton.addEventListener("click", itsClicked);
 
 //function for when button is clicked
-    //edit the inner HTML of the answer display div to show custom attribute data
-    
+function itsClicked(event) {
+    console.log(event.target);
+    let capital = event.target.getAttribute("value");
+    //edit the inner HTML of the answer display div to show attribute data
+    answerDiv.innerHTML = capital;
+}
+   
+
