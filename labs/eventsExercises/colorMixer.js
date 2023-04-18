@@ -46,19 +46,22 @@ blueTen.addEventListener("click", itsClicked);
 //create a function for when a button is clicked
 function itsClicked(event) {
     //declare a variable for the attribute data of the button
-    let newRed = Number(event.target.getAttribute.data-red);
-    let newGreen = Number(event.target.getAttribute.data-green);
-    let newBlue = Number(event.target.getAttribute.data-blue);
+    let newRed = Number(event.target.getAttribute("dataRed"));
+    let newGreen = Number(event.target.getAttribute("dataGreen"));
+    let newBlue = Number(event.target.getAttribute("dataBlue"));
+
     //create equations for the colors
-    newRed = red + newRed;
-    newGreen = green + newGreen;
-    newBlue = blue + newBlue;
-    console.log("newRed: " + newRed + " newGreen: " + newGreen + " newBlue: " + newBlue);
+    red = red + newRed;
+    green = green + newGreen;
+    blue = blue + newBlue;
+
+    console.log("newRed: " + red + " newGreen: " + green + " newBlue: " + blue);
     //create a variable for new div color equivalent to the current rgb value of the div plus the variable value of the custom button attribute
     //so this holds final data for color change
-    let newColor = "rgb" + "(" + newRed + "," + newGreen + "," + newBlue + ")";
+    let newColor = "rgb" + "(" + red + "," + green + "," + blue + ")";
     resultsDiv.style.backgroundColor = newColor;
     console.log(newColor);
+    colorDiv.innerHTML = "current color is: " + newColor;
     //set background color to new div color value
 }
     
